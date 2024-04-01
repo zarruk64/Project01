@@ -1,5 +1,5 @@
 import numpy as np
-import Randomizers
+#import Randomizers
 
 enegryPrcnt = {
 "Aura": 27,
@@ -16,7 +16,7 @@ for energy in enegryPrcnt.keys():
     for type in range(enegryPrcnt[energy]):
         energyLst.append(energy)
 
-energyLst = Randomizers.randomize(energyLst)
+#energyLst = Randomizers.randomize(energyLst)
 
 def getEnergy():
     charEnergy = energyLst[np.random.randint(0,100)]

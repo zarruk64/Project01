@@ -57,12 +57,10 @@ def getEnergy():
 
     public static ArrayList<String> getEnergy() {
         fillList();
-        energyList = Randomizer.random1(energyList);
-        //TO DO: Randomize (Missing randomizer)
+        energyList = Randomizer.randomize(energyList);
         int random = (int)Math.floor(Math.random() * (100));
         String energy = energyList.get(random);
         ArrayList<String> energyLt = new ArrayList<String>();
-        //TO DO: Get energies if 'Two' or 'Three'
         int cant = 0;
         if (energy == different[0])
             cant = 2;
@@ -71,7 +69,7 @@ def getEnergy():
         else {
             energyLt.add(energy);
         }
-        for (int i = 0; i < cant; i++) {
+        while (energyLt.size() < cant) {
             energy = energyList.get(random);
             if (energy != different[0] && energy != different[1] && energy != different[2])
                 energyLt.add(energy);
